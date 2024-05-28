@@ -1,56 +1,41 @@
 function showHomePage() {
-  hideLanguagesPage();
-  hideProjectsPage();
-  hideSkillsPage();
+  hide("skills");
+  hide("projects");
+  hide("languages");
   document.getElementById("home").style.display = "block";
 }
 
-function hideHomePage() {
-  document.getElementById("home").style.display = "none";
-}
-
 function showSkillsPage() {
-  hideHomePage();
-  hideLanguagesPage();
-  hideProjectsPage();
+  hide("home");
+  hide("projects");
+  hide("languages");
   document.getElementById("skills").style.display = "block";
 }
 
-function hideSkillsPage() {
-  document.getElementById("skills").style.display = "none";
-}
-
 function showLanguagesPage() {
-  hideHomePage();
-  hideSkillsPage();
-  hideProjectsPage();
+  hide("skills");
+  hide("projects");
+  hide("home");
   document.getElementById("languages").style.display = "block";
 }
 
-function hideLanguagesPage() {
-  document.getElementById("languages").style.display = "none";
-}
-
 function showProjectsPage() {
-  hideHomePage();
-  hideLanguagesPage();
-  hideSkillsPage();
+  hide("skills");
+  hide("home");
+  hide("languages");
   document.getElementById("projects").style.display = "block";
-}
-
-function hideProjectsPage() {
-  document.getElementById("projects").style.display = "none";
 }
 
 function showSpecifiedPage(specifiedPage) {
   document.getElementById(specifiedPage).style.display = "block";
 }
 
-function hideSpecifiedPage(specifiedPage) {
-  document.getElementById(specifiedPage).style.display = "none";
+function hide(id) {
+  document.getElementById(id).style.display = "none";
 }
 
-showSkillsPage(); //fot Testing purposes
+showHomePage();
+//showSpecifiedPage("skills");
 
 var homeLink = document.querySelectorAll("#top-menu-bar a")[0];
 homeLink.addEventListener("click", showHomePage);
@@ -63,5 +48,3 @@ projectsLink.addEventListener("click", showProjectsPage);
 
 var languagesLink = document.querySelectorAll("#top-menu-bar a")[3];
 languagesLink.addEventListener("click", showLanguagesPage);
-
-//showSpecifiedPage("skills");
