@@ -50,7 +50,7 @@ function hideSpecifiedPage(specifiedPage) {
   document.getElementById(specifiedPage).style.display = "none";
 }
 
-showHomePage();
+showSkillsPage(); //fot Testing purposes
 
 var homeLink = document.querySelectorAll("#top-menu-bar a")[0];
 homeLink.addEventListener("click", showHomePage);
