@@ -51,7 +51,6 @@ function hideSpecifiedPage(specifiedPage) {
 }
 
 showHomePage();
-//showSpecifiedPage("skills");
 
 var homeLink = document.querySelectorAll("#top-menu-bar a")[0];
 homeLink.addEventListener("click", showHomePage);
@@ -64,3 +63,5 @@ projectsLink.addEventListener("click", showProjectsPage);
 
 var languagesLink = document.querySelectorAll("#top-menu-bar a")[3];
 languagesLink.addEventListener("click", showLanguagesPage);
+
+//showSpecifiedPage("skills");
