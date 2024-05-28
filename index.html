@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My CV</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div id="header-wrapper">
+        <div id="my-picture">
+          <img src="images/th.jpg" alt="My Picture" width="100" />
+        </div>
+        <div id="header-info">
+          <h1>Matt S</h1>
+          <h2 id="job-title">DevOps Engineer</h2>
+        </div>
+      </div>
+      
+      
+
+      <ul id="top-menu-bar">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Skills</a></li> <!-- onclick="showSkillsPage() -->
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Languages</a></li>
+      </ul>
+    </header>
+
+    <section id="content">
+      <div id="side-menu">
+        <section>
+          <h2>Contact Form</h2>
+          <form action="images/th.jpg" method="get">
+            <label for="contact-mail">E-Mail</label>
+            <input
+              type="email"
+              name="email"
+              id="contact-mail"
+              required
+              placeholder="YourMail@Home.com"
+            />
+            <br />
+            <label for="contact-name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="contact-name"
+              required
+              placeholder="Your Name"
+            />
+            <br />
+            <label for="contact-age">Age</label>
+            <input
+              type="number"
+              name="age"
+              id="contact-age"
+              required
+              placeholder="Age"
+            />
+            <br />
+            <label for="contact-reason">Reason</label>
+            <input
+              type="text"
+              name="reason"
+              id="contact-reason"
+              required
+              placeholder="Why do you want to contact me?"
+            />
+            <br />
+            <button type="submit">Contact me</button>
+          </form>
+        </section>
+        <section>
+          <h2>Rubik´s Face</h2>
+          <div class="rubik-face">
+            <div style="background-color: blue;"></div>
+            <div style="background-color: yellow;"></div>
+            <div style="background-color: blue;"></div>
+            <div style="background-color: yellow;"></div>
+            <div style="background-color: blue;"></div>
+            <div style="background-color: purple;"></div>
+            <div style="background-color: white;"></div>
+            <div style="background-color: blue;"></div>
+            <div style="background-color: white;"></div>
+                 </section>
+      </div>
+
+      <div class="page" id="home">
+        <h2>Home</h2>
+        <p><strong>Hello</strong> , welcome to my site.</p>
+        <p>This page is about me learning WEB Programming</p>
+        <p>I want this to <strong>work</strong> out and learn more.</p>
+        <p>
+          <strong>Bold <i>and</i></strong> <i>Italic</i>
+        </p>
+      </div>
+
+      <br />
+      <div class="page" id="languages">
+        <h2>Known Languages</h2>
+        <table border="1" style="color: aqua">
+          <tr>
+            <th>Language</th>
+            <th>Level</th>
+          </tr>
+          <tr>
+            <td>German from Germany</td>
+            <td>Native</td>
+          </tr>
+          <tr>
+            <td>English</td>
+            <td>Professional</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="page" id="skills">
+        <h2>Skills & Endorcements</h2>
+        <ol>
+          <li class="FavoriteSkill">Delphi -10</li>
+          <li class="FavoriteSkill">C# - 8</li>
+          <li>HTML - 1</li>
+          <li>CSS - 0</li>
+          <li>JavaScript - 0</li>
+        </ol>
+      </div>
+
+      <div class="page" id="projects">
+        <h2>Projects</h2>
+        <p>This are the projects I´ve been working on...</p>
+      </div>
+
+      <br />
+    </section>
+    <footer><a href="https://www.google.de">My Google Ref</a></footer>
+    
+    <script src="index.js"></script>
+ 
+  </body>
+</html>
