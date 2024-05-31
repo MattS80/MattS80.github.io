@@ -18,10 +18,6 @@ function showProjectsPage() {
   show("projects");
 }
 
-//function showSpecifiedPage(specifiedPage) {
-//  document.getElementById(specifiedPage).style.display = "block";
-//}
-
 function show(id) {
   document.getElementById(id).style.display = "block";
 }
@@ -38,7 +34,6 @@ function hideAll() {
 }
 
 showHomePage();
-//showSpecifiedPage("skills");
 
 var homeLink = document.querySelectorAll("#top-menu-bar a")[0];
 homeLink.addEventListener("click", showHomePage);
