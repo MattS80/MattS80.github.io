@@ -1,53 +1,27 @@
 var activePage = "home";
 
-function showHomePage() {
-  hide(activePage);
-  show("home");
-}
-
-function showSkillsPage() {
-  hide(activePage);
-  show("skills");
-}
-
-function showLanguagesPage() {
-  hide(activePage);
-  show("languages");
-}
-
-function showProjectsPage() {
-  hide(activePage);
-  show("projects");
-}
-
 function show(id) {
   document.getElementById(id).style.display = "block";
-  activePage = id;
 }
 
 function hide(id) {
   document.getElementById(id).style.display = "none";
 }
 
-function hideAll() {
-  hide("skills");
-  hide("home");
-  hide("languages");
-  hide("projects");
+function showPage(id) {
+  hide(activePage);
+  show(id);
+  activePage = id;
 }
 
-//hideAll();
-show(activePage);
-//showHomePage();
+showPage(activePage);
 
-var homeLink = document.querySelectorAll("#top-menu-bar a")[0];
-homeLink.addEventListener("click", showHomePage);
-
-var skillsLink = document.querySelectorAll("#top-menu-bar a")[1];
-skillsLink.addEventListener("click", showSkillsPage);
-
-var projectsLink = document.querySelectorAll("#top-menu-bar a")[2];
-projectsLink.addEventListener("click", showProjectsPage);
-
-var languagesLink = document.querySelectorAll("#top-menu-bar a")[3];
-languagesLink.addEventListener("click", showLanguagesPage);
+document.querySelector("#top-menu-bar").addEventListener("click", function (e) {
+  var id = e.target.dataset.page;
+  //console.info("Click on menu-bar", e.target.getAttribute("data-page"));
+  //show(e.target.getAttribute("data-page"));
+  //console.info(typeof id + " || " + id);
+  if (id != undefined) {
+    showPage(id);
+  }
+});
