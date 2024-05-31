@@ -1,4 +1,4 @@
-var activePage = "home";
+var activePage = "skills";
 
 function $(selector) {
   return document.querySelector(selector);
@@ -44,3 +44,19 @@ $("#top-menu-bar").addEventListener("click", function (e) {
     showPage(id);
   }
 });
+
+console.info($("#skills ul"));
+/*
+          <li class="FavoriteSkill">Delphi -10</li>
+          <li class="FavoriteSkill">C# - 8</li>
+          <li>HTML - 1</li>
+          <li>CSS - 0</li>
+          <li>JavaScript - 0</li>
+*/
+var skills = ["HTML - 3", "CSS - 2", "JavaScript -1"];
+var skillsMapResult = skills.map(function (skill) {
+  console.info("inside map", skill);
+  return `<li>${skill}</li>`;
+});
+//console.warn("result", skillsMapResult);
+$("#skills ul").innerHTML = skillsMapResult.join("");
