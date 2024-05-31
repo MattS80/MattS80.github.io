@@ -1,25 +1,28 @@
+var activePage = "home";
+
 function showHomePage() {
-  hideAll();
+  hide(activePage);
   show("home");
 }
 
 function showSkillsPage() {
-  hideAll();
+  hide(activePage);
   show("skills");
 }
 
 function showLanguagesPage() {
-  hideAll();
+  hide(activePage);
   show("languages");
 }
 
 function showProjectsPage() {
-  hideAll();
+  hide(activePage);
   show("projects");
 }
 
 function show(id) {
   document.getElementById(id).style.display = "block";
+  activePage = id;
 }
 
 function hide(id) {
@@ -33,7 +36,9 @@ function hideAll() {
   hide("projects");
 }
 
-showHomePage();
+//hideAll();
+show(activePage);
+//showHomePage();
 
 var homeLink = document.querySelectorAll("#top-menu-bar a")[0];
 homeLink.addEventListener("click", showHomePage);
